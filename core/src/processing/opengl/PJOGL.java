@@ -614,6 +614,7 @@ public class PJOGL extends PGL {
     super.beginDraw(clear0);
   }
 
+  public static boolean OVR_Render = false;
 
   @Override
   protected void endDraw(boolean clear0) {
@@ -632,7 +633,7 @@ public class PJOGL extends PGL {
                       0, 0, pg.width, pg.height, 0, 0, pg.width, pg.height);
           backFBO.bind(gl);
         }
-      } else {
+      } else if(!OVR_Render) {
         super.endDraw(clear0);
       }
     }
