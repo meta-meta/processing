@@ -28,3 +28,11 @@ idea {
 task wrapper(type: Wrapper) {
 	gradleVersion = '2.2.1'
 }
+
+task copyResources(type: Copy) {
+    from 'src'
+    into 'build/classes/main'
+    include 'processing/opengl/*.glsl', 'icon/*.png'
+}
+
+build.dependsOn copyResources
