@@ -8017,7 +8017,7 @@ public class PApplet extends Applet
       return new File(dataFolder, where);
     }
     // Windows, Linux, or when not using a Mac OS X .app file
-    return new File(sketchPath + File.separator + "data" + File.separator + where);
+    return new File(calcSketchPath() + File.separator + "data" + File.separator + where);
   }
 
 
