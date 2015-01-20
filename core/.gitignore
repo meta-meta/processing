@@ -12,3 +12,5 @@ out
 *.war
 *.ear
 *.log
+
+!gradle/wrapper/gradle-wrapper.jar
